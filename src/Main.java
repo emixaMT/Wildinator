@@ -1,16 +1,31 @@
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		//Création des films
-		Film film1 = new Film("Massacre à la tronconneuse","Tronconneuse",2001);
-		Film film2 = new Film("Scream","Couteau",2004);
+		//Création de la collection de film
+		Film film1 = new Film("Paranormal Activity 2","Les caméras c'est pas toujours pour les sex-tape",2010);
+		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur ",2011);
+		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer",2011);
+		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque",1977);
 		
+		ArrayList<Film> films = new ArrayList<>();
+		films.add(film1);
+		films.add(film2);
+		films.add(film3);
+		films.add(film4);
+		
+		int size = films.size();
+		
+		Random r = new Random();
+		int rand1 = r.nextInt(size);
+		int rand2 = r.nextInt(size);
 		
 		//Utilisation de la methode contre 
-		contre(film1, film2);
+		contre(films.get(rand1), films.get(rand2));
 		
 		//Initialisation du scanner
 		Scanner in = new Scanner(System.in);
@@ -20,7 +35,7 @@ public class Main {
 		int choix = Integer.valueOf(input);
 		
 		//Utilisation de la methode choix
-		choix(film1, film2, choix);
+		choix(films.get(0), films.get(1), choix);
 		
 	}
 	
