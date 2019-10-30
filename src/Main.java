@@ -11,6 +11,11 @@ public class Main {
 		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur ",2011);
 		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer",2011);
 		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque",1977);
+		Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
+		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
+		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
+		Film film12 = new Film("The project Blair Witch", "Une sorcière dans les bois", 1999);
+
 		
 		ArrayList<Film> films = new ArrayList<>();
 		films.add(film1);
