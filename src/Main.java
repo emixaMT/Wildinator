@@ -11,6 +11,10 @@ public class Main {
 		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur ",2011);
 		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer",2011);
 		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque",1977);
+		Film film5 = new Film("Saw","Tu t'ai déjà réveillé attaché a un chiotte, un inconnus en face de toi et une scie.",2004);
+		Film film6 = new Film("Scream","Tu t'appretes a regarder un film d'horreur quand tout a coup le telephonne sonne.",1997);
+		Film film7 = new Film("The birds","Trouves tu que les épouvantails ont une utilitée? Après ce film tu auras changé d'avis.",1963);
+		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés ou les gentils font des bétises et ca dérape!",2003);
 		Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
 		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
 		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
@@ -22,6 +26,10 @@ public class Main {
 		films.add(film2);
 		films.add(film3);
 		films.add(film4);
+		films.add(film5);
+		films.add(film6);
+		films.add(film7);
+		films.add(film8);
 		films.add(film9);
 		films.add(film10);
 		films.add(film11);
