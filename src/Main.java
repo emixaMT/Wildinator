@@ -42,10 +42,10 @@ public class Main {
 			choix = Integer.valueOf(input);
 		}
 		if (choix == 1) {
-			System.out.println("Le premier film");
+			System.out.println("Vous avez choisis le premier film");
 		}
 		if (choix == 2) {
-			System.out.println("Le deuxieme film");
+			System.out.println("Vous avez choisis le deuxieme film");
 		}
 	}
 	
