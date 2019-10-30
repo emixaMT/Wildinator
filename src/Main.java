@@ -22,6 +22,10 @@ public class Main {
 		films.add(film2);
 		films.add(film3);
 		films.add(film4);
+		films.add(film9);
+		films.add(film10);
+		films.add(film11);
+		films.add(film12);
 		
 		int size = films.size();
 		
