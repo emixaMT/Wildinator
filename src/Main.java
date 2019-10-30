@@ -19,30 +19,65 @@ public class Main {
 		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
 		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
 		Film film12 = new Film("The project Blair Witch", "Une sorcière dans les bois", 1999);
+		Film film13 = new Film("the Ring","la télé vous fait mourrir de peur",2002);
+        Film film14 = new Film("Shining","un hotel cachant de terrible secret vous fera basculer peu a peu dans la folie",1980);
+        Film film15 = new Film("Don't breathe","Même avec un handicap il reste le plus dangereux",2016);
+        Film film16 = new Film("Sept jours à vivre","quand le compte a rebours est lancé impossible de l'arreter",2000);
 
 		
-		ArrayList<Film> films = new ArrayList<>();
-		films.add(film1);
-		films.add(film2);
-		films.add(film3);
-		films.add(film4);
-		films.add(film5);
-		films.add(film6);
-		films.add(film7);
-		films.add(film8);
-		films.add(film9);
-		films.add(film10);
-		films.add(film11);
-		films.add(film12);
+		ArrayList<Film> filmsDepart = new ArrayList<>();
+		filmsDepart.add(film1);
+		filmsDepart.add(film2);
+		filmsDepart.add(film3);
+		filmsDepart.add(film4);
+		filmsDepart.add(film5);
+		filmsDepart.add(film6);
+		filmsDepart.add(film7);
+		filmsDepart.add(film8);
+		filmsDepart.add(film9);
+		filmsDepart.add(film10);
+		filmsDepart.add(film11);
+		filmsDepart.add(film12);
+		filmsDepart.add(film13);
+		filmsDepart.add(film14);
+		filmsDepart.add(film15);
+		filmsDepart.add(film16);
 		
-		int size = films.size();
 		
-		Random r = new Random();
-		int rand1 = r.nextInt(size);
-		int rand2 = r.nextInt(size);
+		ArrayList<Film> filmsTour2 = new ArrayList<>();
+		int i=filmsDepart.size()-1;
+		System.out.println("Bienvenue dans le Wildinator !");System.out.println("");System.out.println("");
+		//Tour 1
 		
-		//Utilisation de la methode contre 
-		contre(films.get(rand1), films.get(rand2));
+		tour1(filmsDepart, filmsTour2, i);
+		
+	
+		
+		//Tour 2
+		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("Ok maintenant on passe au tour 2, il va prendre vos choix et les confronter entre eux !");
+		System.out.println("");System.out.println("");System.out.println("");
+		ArrayList<Film> filmsTour3 = new ArrayList<>();
+		i = filmsTour2.size()-1;
+		
+		tour2(filmsTour2, filmsTour3, i);
+		
+		//Tour 3
+		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("Maintenant c'est le 3eme tour, allez c'est bientot fini !");
+		System.out.println("");
+		ArrayList<Film> filmsTour4 = new ArrayList<>();
+		i = filmsTour3.size()-1;
+			
+		tour3(filmsTour3, filmsTour4, i);
+		
+		
+		//Tour final
+		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("Et voila le dernier choix a faire !");
+		System.out.println("");
+		
+		contre(filmsTour4.get(0), filmsTour4.get(1));
 		
 		//Initialisation du scanner
 		Scanner in = new Scanner(System.in);
@@ -51,10 +86,13 @@ public class Main {
 		//Retypage de la valeur input de String a int
 		int choix = Integer.valueOf(input);
 		
-		//Utilisation de la methode choix
-		choix(films.get(0), films.get(1), choix);
+		choix(filmsTour4.get(0), filmsTour4.get(1), choix);
+		
+		if(choix == 1)System.out.println(filmsTour4.get(0).getNom());
+		if(choix == 2)System.out.println(filmsTour4.get(1).getNom());
 		
 	}
+
 	
 	
 	//Methode qui permet d'opposer 2 films
@@ -66,15 +104,18 @@ public class Main {
 	}
 	
 	//Methode qui set l'etat du film en fonction du choix de l'utilisateur
-	public static void choix(Film film1, Film film2,int choix) {
+	public static void choix(Film filmGauche, Film filmDroite,int choix) {
+		filmGauche.setEtat(false);
+		filmDroite.setEtat(false);
 		while (choix!=1 && choix!=2) {
-			System.out.println("invalide");
+			System.out.println("invalide, veuillez choisir 1 ou 2");
 			Scanner in = new Scanner(System.in);
 			String input = in.nextLine();
 			choix = Integer.valueOf(input);
 		}
 		if (choix == 1) {
 			System.out.println("Vous avez choisis le premier film");
+			filmGauche.setEtat(true);
 		}
 		if (choix == 2) {
 			System.out.println("Vous avez choisis le deuxieme film");
@@ -82,4 +123,117 @@ public class Main {
 	}
 	
 	
+	public static void tour1(ArrayList<Film> filmsDepart, ArrayList<Film> filmsTour2, int i) {
+		while(i>0) {
+			Random r = new Random();
+			int rand1 = r.nextInt(filmsDepart.size());
+			int rand2 = r.nextInt(filmsDepart.size());
+			while(rand2 == rand1) {
+				rand2 = r.nextInt(filmsDepart.size());
+			}
+			//Utilisation de la methode contre 
+			contre(filmsDepart.get(rand1), filmsDepart.get(rand2));
+			
+			//Initialisation du scanner
+			Scanner in = new Scanner(System.in);
+			String input = in.nextLine();
+			
+			//Retypage de la valeur input de String a int
+			int choix = Integer.valueOf(input);
+			
+			//Utilisation de la methode choix
+			choix(filmsDepart.get(rand1), filmsDepart.get(rand2), choix);
+			
+			if(filmsDepart.get(rand1).isEtat()) {
+				filmsTour2.add(filmsDepart.get(rand1));
+			}
+			else {
+			filmsTour2.add(filmsDepart.get(rand2));
+			}
+			filmsDepart.remove(rand1);
+			if(rand1<rand2) {
+				filmsDepart.remove(rand2-1);
+			}else {
+			filmsDepart.remove(rand2);
+			}
+			i-=2;
+			System.out.println("");System.out.println("");
+		}
+	}
+	
+	public static void tour2(ArrayList<Film> filmsTour2, ArrayList<Film> filmsTour3, int i) {
+		while(i>0) {
+			Random r = new Random();
+			int rand1 = r.nextInt(filmsTour2.size());
+			int rand2 = r.nextInt(filmsTour2.size());
+			while(rand2 == rand1) {
+				rand2 = r.nextInt(filmsTour2.size());
+			}
+			//Utilisation de la methode contre 
+			contre(filmsTour2.get(rand1), filmsTour2.get(rand2));
+			
+			//Initialisation du scanner
+			Scanner in = new Scanner(System.in);
+			String input = in.nextLine();
+			
+			//Retypage de la valeur input de String a int
+			int choix = Integer.valueOf(input);
+			
+			//Utilisation de la methode choix
+			choix(filmsTour2.get(rand1), filmsTour2.get(rand2), choix);
+			
+			if(filmsTour2.get(rand1).isEtat()) {
+				filmsTour3.add(filmsTour2.get(rand1));
+			}
+			else {
+				filmsTour3.add(filmsTour2.get(rand2));
+			}
+			filmsTour2.remove(rand1);
+			if(rand1<rand2) {
+				filmsTour2.remove(rand2-1);
+			}else {
+				filmsTour2.remove(rand2);
+			}
+			i-=2;
+		}
+	}
+
+	public static void tour3(ArrayList<Film> filmsTour3, ArrayList<Film> filmsTour4, int i) {
+		while(i>0) {
+			Random r = new Random();
+			int rand1 = r.nextInt(filmsTour3.size());
+			int rand2 = r.nextInt(filmsTour3.size());
+			while(rand2 == rand1) {
+				rand2 = r.nextInt(filmsTour3.size());
+			}
+			//Utilisation de la methode contre 
+			contre(filmsTour3.get(rand1), filmsTour3.get(rand2));
+			
+			//Initialisation du scanner
+			Scanner in = new Scanner(System.in);
+			String input = in.nextLine();
+			
+			//Retypage de la valeur input de String a int
+			int choix = Integer.valueOf(input);
+			
+			//Utilisation de la methode choix
+			choix(filmsTour3.get(rand1), filmsTour3.get(rand2), choix);
+			
+			if(filmsTour3.get(rand1).isEtat()) {
+				filmsTour4.add(filmsTour3.get(rand1));
+			}
+			else {
+			filmsTour4.add(filmsTour3.get(rand2));
+			}
+			filmsTour3.remove(rand1);
+			if(rand1<rand2) {
+				filmsTour3.remove(rand2-1);
+			}else {
+				filmsTour3.remove(rand2);
+			}
+			i-=2;
+		}
+	}
+
+
 }
