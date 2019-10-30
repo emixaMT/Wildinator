@@ -19,13 +19,7 @@ public class Film {
 		
 		//Methodes
 
-		
-		
-		
-		
-		
-		
-		
+
 		//Getter & Setter
 
 		public boolean isEtat() {
