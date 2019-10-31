@@ -15,14 +15,14 @@ public class Main {
 		Film film6 = new Film("Scream","Tu t'appretes a regarder un film d'horreur quand tout a coup le telephonne sonne.",1997);
 		Film film7 = new Film("The birds","Trouves tu que les épouvantails ont une utilitée? Après ce film tu auras changé d'avis.",1963);
 		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés ou les gentils font des bétises et ca dérape!",2003);
-		Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
+		/*Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
 		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
 		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
 		Film film12 = new Film("The project Blair Witch", "Une sorcière dans les bois", 1999);
 		Film film13 = new Film("the Ring","la télé vous fait mourrir de peur",2002);
         Film film14 = new Film("Shining","un hotel cachant de terrible secret vous fera basculer peu a peu dans la folie",1980);
         Film film15 = new Film("Don't breathe","Même avec un handicap il reste le plus dangereux",2016);
-        Film film16 = new Film("Sept jours à vivre","quand le compte a rebours est lancé impossible de l'arreter",2000);
+        Film film16 = new Film("Sept jours à vivre","quand le compte a rebours est lancé impossible de l'arreter",2000);*/
 
 		
 		ArrayList<Film> filmsDepart = new ArrayList<>();
@@ -34,14 +34,14 @@ public class Main {
 		filmsDepart.add(film6);
 		filmsDepart.add(film7);
 		filmsDepart.add(film8);
-		filmsDepart.add(film9);
+		/*filmsDepart.add(film9);
 		filmsDepart.add(film10);
 		filmsDepart.add(film11);
 		filmsDepart.add(film12);
 		filmsDepart.add(film13);
 		filmsDepart.add(film14);
 		filmsDepart.add(film15);
-		filmsDepart.add(film16);
+		filmsDepart.add(film16);*/
 		
 		
 		ArrayList<Film> filmsTour2 = new ArrayList<>();
@@ -61,15 +61,17 @@ public class Main {
 		i = filmsTour2.size()-1;
 		
 		tour2(filmsTour2, filmsTour3, i);
-		
+		/*
 		//Tour 3
 		System.out.println("");System.out.println("");System.out.println("");
 		System.out.println("Maintenant c'est le 3eme tour, allez c'est bientot fini !");
-		System.out.println("");
-		ArrayList<Film> filmsTour4 = new ArrayList<>();
-		i = filmsTour3.size()-1;
+		System.out.println("");*/
+		//ArrayList<Film> filmsTour4 = new ArrayList<>();
+		//i = filmsTour3.size()-1;
 			
-		tour3(filmsTour3, filmsTour4, i);
+		//tour3(filmsTour3, filmsTour4, i);
+		
+		
 		
 		
 		//Tour final
@@ -77,19 +79,20 @@ public class Main {
 		System.out.println("Et voila le dernier choix a faire !");
 		System.out.println("");
 		
-		contre(filmsTour4.get(0), filmsTour4.get(1));
+		//contre(filmsTour4.get(0), filmsTour4.get(1));
 		
+		contre(filmsTour3.get(0), filmsTour3.get(1));
 		//Initialisation du scanner
 		Scanner in = new Scanner(System.in);
 		String input = in.nextLine();
 		
-		//Retypage de la valeur input de String a int
+		//Conversion de la valeur input de String a int
 		int choix = Integer.valueOf(input);
 		
-		choix(filmsTour4.get(0), filmsTour4.get(1), choix);
+		choix(filmsTour3.get(0), filmsTour3.get(1), choix);
 		
-		if(choix == 1)System.out.println(filmsTour4.get(0).getNom());
-		if(choix == 2)System.out.println(filmsTour4.get(1).getNom());
+		if(choix == 1)System.out.println(filmsTour3.get(0).getNom());
+		if(choix == 2)System.out.println(filmsTour3.get(1).getNom());
 		
 	}
 
@@ -108,7 +111,7 @@ public class Main {
 		filmGauche.setEtat(false);
 		filmDroite.setEtat(false);
 		while (choix!=1 && choix!=2) {
-			System.out.println("invalide, veuillez choisir 1 ou 2");
+			System.out.println("Invalide, veuillez choisir 1 ou 2 ");
 			Scanner in = new Scanner(System.in);
 			String input = in.nextLine();
 			choix = Integer.valueOf(input);
@@ -148,13 +151,13 @@ public class Main {
 				filmsTour2.add(filmsDepart.get(rand1));
 			}
 			else {
-			filmsTour2.add(filmsDepart.get(rand2));
+				filmsTour2.add(filmsDepart.get(rand2));
 			}
 			filmsDepart.remove(rand1);
 			if(rand1<rand2) {
 				filmsDepart.remove(rand2-1);
 			}else {
-			filmsDepart.remove(rand2);
+				filmsDepart.remove(rand2);
 			}
 			i-=2;
 			System.out.println("");System.out.println("");
