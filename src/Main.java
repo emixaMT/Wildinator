@@ -7,14 +7,14 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Création de la collection de film
-		Film film1 = new Film("Paranormal Activity 2","Les caméras c'est pas toujours pour les sex-tape",2010);
-		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur ",2011);
-		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer",2011);
-		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque",1977);
+		Film film1 = new Film("Paranormal Activity 2","Les caméras c'est pas toujours pour les sex-tape.",2010);
+		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur.",2011);
+		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer.",2011);
+		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque.",1977);
 		Film film5 = new Film("Saw","Tu t'ai déjà réveillé attaché a un chiotte, un inconnus en face de toi et une scie.",2004);
 		Film film6 = new Film("Scream","Tu t'appretes a regarder un film d'horreur quand tout a coup le telephonne sonne.",1997);
 		Film film7 = new Film("The birds","Trouves tu que les épouvantails ont une utilitée? Après ce film tu auras changé d'avis.",1963);
-		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés ou les gentils font des bétises et ca dérape!",2003);
+		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés où les gentils font des bétises et ca dérape!",2003);
 		/*Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
 		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
 		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
@@ -46,7 +46,8 @@ public class Main {
 		
 		ArrayList<Film> filmsTour2 = new ArrayList<>();
 		int i=filmsDepart.size()-1;
-		System.out.println("Bienvenue dans le Wildinator !");System.out.println("");System.out.println("");
+		entete();
+
 		//Tour 1
 		
 		tour1(filmsDepart, filmsTour2, i);
@@ -54,9 +55,9 @@ public class Main {
 	
 		
 		//Tour 2
-		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("--------------------------------------------------------------");System.out.println("");
 		System.out.println("Ok maintenant on passe au tour 2, il va prendre vos choix et les confronter entre eux !");
-		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("");System.out.println("--------------------------------------------------------------");
 		ArrayList<Film> filmsTour3 = new ArrayList<>();
 		i = filmsTour2.size()-1;
 		
@@ -75,9 +76,9 @@ public class Main {
 		
 		
 		//Tour final
-		System.out.println("");System.out.println("");System.out.println("");
+		System.out.println("--------------------------------------------------------------");System.out.println("");
 		System.out.println("Et voila le dernier choix a faire !");
-		System.out.println("");
+		System.out.println("");System.out.println("--------------------------------------------------------------");
 		
 		//contre(filmsTour4.get(0), filmsTour4.get(1));
 		
@@ -91,14 +92,54 @@ public class Main {
 		
 		choix(filmsTour3.get(0), filmsTour3.get(1), choix);
 		
-		if(choix == 1)System.out.println(filmsTour3.get(0).getNom());
-		if(choix == 2)System.out.println(filmsTour3.get(1).getNom());
+		if(choix == 1) {
+			System.out.println("Visiblement, la description de "+filmsTour3.get(0).getNom() + " vous a convaincu, bon visionnage 👻");
+		}
+		if(choix == 2) {
+			System.out.println("Visiblement, la description de "+filmsTour3.get(1).getNom() + " vous a convaincu, bon visionnage 👻");
+		}
 		
 	}
 
 	
 	
 	//Methode qui permet d'opposer 2 films
+	public static void entete() {
+		System.out.println(" 	  __    __ _ _     _ _             _             \n" + 
+				"	 / / /\\ \\ (_) | __| (_)_ __   __ _| |_ ___  _ __ \n" + 
+				"	 \\ \\/  \\/ / | |/ _` | | '_ \\ / _` | __/ _ \\| '__|\n" + 
+				"	  \\  /\\  /| | | (_| | | | | | (_| | || (_) | |   \n" + 
+				" 	   \\/  \\/ |_|_|\\__,_|_|_| |_|\\__,_|\\__\\___/|_|   \n" + 
+				"                                                ");
+		System.out.println("                            @@@\n" + 
+				"                             @@@\n" + 
+				"                              @@@\n "+
+				"                              @@@\n" + 
+				"                      @@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"                    @@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"                @@@@@@@@ @@@@@@@@@@@@@@@@ @@@@@@@@\n" + 
+				"              @@@@@@@@@   @@@@@@@@@@@@@@   @@@@@@@@@\n" + 
+				"            @@@@@@@@@@     @@@@@@@@@@@@     @@@@@@@@@@\n" + 
+				"           @@@@@@@@@@       @@@@  @@@@       @@@@@@@@@@\n" + 
+				"           @@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@\n" + 
+				"           @@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@@\n" + 
+				"           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"           @@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@\n" + 
+				"            @@@@@@@@  @@ @@ @@ @@ @@ @@ @@ @  @@@@@@@@\n" + 
+				"              @@@@@@@                        @@@@@@@\n" + 
+				"                @@@@@@  @@ @@ @@ @@ @@ @@ @ @@@@@@\n" + 
+				"                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"                    @@@@@@@@@@@@@@@@@@@@@@@@@@\n" + 
+				"                      @@@@@@@@@@@@@@@@@@@@@@"
+				);
+		System.out.println("");
+		System.out.println("Le but est de vous présenter une brève description d'un film ainsi que l'année de sortie de ce dernier");
+		System.out.println("Plusieurs choix consécutifs vont amener à vous faire choisir parmis vos choix précédents pour vous ressortir un seul film !");
+		System.out.println("Let's go ! 🎃");System.out.println("");
+	}
+	
 	public static void contre(Film film1, Film film2) {
 		System.out.println("Veuillez choisir un film parmis ces 2 choix:");
 		System.out.println("1: " + film1.getDescription() + " "+film1.getAnnee());
@@ -118,10 +159,13 @@ public class Main {
 		}
 		if (choix == 1) {
 			System.out.println("Vous avez choisis le premier film");
+			System.out.println("");
 			filmGauche.setEtat(true);
 		}
 		if (choix == 2) {
 			System.out.println("Vous avez choisis le deuxieme film");
+			System.out.println("");
+
 		}
 	}
 	
