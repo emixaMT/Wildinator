@@ -7,22 +7,15 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Création de la collection de film
-		Film film1 = new Film("Paranormal Activity 2","Les caméras c'est pas toujours pour les sex-tape.",2010);
+		Film film1 = new Film("Paranormal Activity 2","Les caméras c'est pas toujours pour les sex-tapes.",2010);
 		Film film2 = new Film("Blood Island","Des vacances qui tournent à l'horreur.",2011);
-		Film film3 = new Film("The Thing","Un prédateur protéiforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer.",2011);
-		Film film4 = new Film("Eraserhead","Torture gratuite démoniaque.",1977);
-		Film film5 = new Film("Saw","Tu t'ai déjà réveillé attaché a un chiotte, un inconnus en face de toi et une scie.",2004);
-		Film film6 = new Film("Scream","Tu t'appretes a regarder un film d'horreur quand tout a coup le telephonne sonne.",1997);
-		Film film7 = new Film("The birds","Trouves tu que les épouvantails ont une utilitée? Après ce film tu auras changé d'avis.",1963);
-		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés où les gentils font des bétises et ca dérape!",2003);
-		/*Film film9 = new Film("The Hills have Eyes", "Anniversaire de mariage raté", 2005);
-		Film film10 = new Film("Captif", "Torture après une mission humanitaire", 2010);
-		Film film11 = new Film("Psychos", "S'enfuir avec de l'argent peut mener à la mort", 1960);
-		Film film12 = new Film("The project Blair Witch", "Une sorcière dans les bois", 1999);
-		Film film13 = new Film("the Ring","la télé vous fait mourrir de peur",2002);
-        Film film14 = new Film("Shining","un hotel cachant de terrible secret vous fera basculer peu a peu dans la folie",1980);
-        Film film15 = new Film("Don't breathe","Même avec un handicap il reste le plus dangereux",2016);
-        Film film16 = new Film("Sept jours à vivre","quand le compte a rebours est lancé impossible de l'arreter",2000);*/
+		Film film3 = new Film("The Thing","Un prédateur protéïforme venu d’un autre monde tente de survivre et de prospérer aux dépens d’humains terrorisés qu’il infecte et pousse à s’entre-tuer.",2011);
+		Film film4 = new Film("Eraserhead","Tortures gratuites démoniaque.",1977);
+		Film film5 = new Film("Saw","Tu t'ai déjà réveillé attaché à un chiotte, un inconnu en face de toi et une scie.",2004);
+		Film film6 = new Film("Scream","Tu t'apprètes à regarder un film d'horreur quand tout à coup le téléphone sonne.",1997);
+		Film film7 = new Film("The birds","Trouves-tu que les épouvantails ont une utilitée? Après ce film tu auras changé d'avis.",1963);
+		Film film8 = new Film("28 Days Later","Un film avec des chimpanzés où les gentils font des bétises et ça dérape!",2003);
+		
 
 		
 		ArrayList<Film> filmsDepart = new ArrayList<>();
@@ -34,14 +27,7 @@ public class Main {
 		filmsDepart.add(film6);
 		filmsDepart.add(film7);
 		filmsDepart.add(film8);
-		/*filmsDepart.add(film9);
-		filmsDepart.add(film10);
-		filmsDepart.add(film11);
-		filmsDepart.add(film12);
-		filmsDepart.add(film13);
-		filmsDepart.add(film14);
-		filmsDepart.add(film15);
-		filmsDepart.add(film16);*/
+		
 		
 		
 		ArrayList<Film> filmsTour2 = new ArrayList<>();
@@ -60,7 +46,20 @@ public class Main {
 		System.out.println("");System.out.println("--------------------------------------------------------------");
 		ArrayList<Film> filmsTour3 = new ArrayList<>();
 		i = filmsTour2.size()-1;
-		
+		System.out.println("                                   _\n" + 
+				"       /      \\         __      _\\( )/_\n" + 
+				"    \\  \\  ,,  /  /   | /  \\ |    /(O)\\ \n" + 
+				"     '-.`\\()/`.-'   \\_\\\\  //_/    _.._   _\\(o)/_  //  \\\\\n" + 
+				"    .--_'(  )'_--.   .'/()\\'.   .'    '.  /(_)\\  _\\\\()//_\n" + 
+				"   / /` /`\"\"`\\ `\\ \\   \\\\  //   /   __   \\       / //  \\\\ \\\n" + 
+				"    |  |  ><  |  |          ,  |   ><   |  ,     | \\__/ |\n" + 
+				"    \\  \\      /  /         . \\  \\      /  / .              _\n" + 
+				"   _    '.__.'    _\\(O)/_   \\_'--`(  )'--'_/     __     _\\(_)/_\n" + 
+				"_\\( )/_            /(_)\\      .--'/()\\'--.    | /  \\ |   /(O)\\\n" + 
+				" /(O)\\  //  \\\\         _     /  /` '' `\\  \\  \\_\\\\  //_/\n" + 
+				"       _\\\\()//_     _\\(_)/_    |        |      //()\\\\ \n" + 
+				"      / //  \\\\ \\     /(o)\\      \\      /       \\\\  //\n" + 
+				"       | \\__/ |");
 		tour2(filmsTour2, filmsTour3, i);
 		/*
 		//Tour 3
@@ -105,7 +104,8 @@ public class Main {
 	
 	//Methode qui permet d'opposer 2 films
 	public static void entete() {
-		System.out.println(" 	  __    __ _ _     _ _             _             \n" + 
+		System.out.println(
+				" 	  __    __ _ _     _ _             _             \n " + 
 				"	 / / /\\ \\ (_) | __| (_)_ __   __ _| |_ ___  _ __ \n" + 
 				"	 \\ \\/  \\/ / | |/ _` | | '_ \\ / _` | __/ _ \\| '__|\n" + 
 				"	  \\  /\\  /| | | (_| | | | | | (_| | || (_) | |   \n" + 
